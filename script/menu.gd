@@ -8,6 +8,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(OS.get_name())
+	print(IP.get_local_addresses()[3])
 	pass # Replace with function body.
 
 

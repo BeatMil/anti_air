@@ -10,7 +10,7 @@ margin_left = 351.0
 margin_top = 127.0
 margin_right = 539.0
 margin_bottom = 173.0
-text = "sever"
+text = "create sever"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -20,7 +20,7 @@ margin_left = 353.0
 margin_top = 231.0
 margin_right = 541.0
 margin_bottom = 277.0
-text = "client"
+text = "join server"
 __meta__ = {
 "_edit_use_anchors_": false
 }
