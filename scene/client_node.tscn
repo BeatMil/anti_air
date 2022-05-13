@@ -35,5 +35,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ip_label" type="Label" parent="."]
+margin_left = 541.832
+margin_top = 159.643
+margin_right = 666.832
+margin_bottom = 196.643
+text = "My ip: ..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="connect_button" to="." method="_on_connect_button_pressed"]
 [connection signal="pressed" from="disconnect_button" to="." method="_on_disconnect_button_pressed"]

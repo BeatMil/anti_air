@@ -9,8 +9,17 @@ func _ready():
 	get_tree().set_network_peer(network)
 	network.connect("connection_failed",self,"_on_connection_failed")
 	get_tree().multiplayer.connect("network_peer_packet",self,"_on_packet_received")
+	$ip_label.text = array_to_string(IP.get_local_addresses())
 
-  
+
+func array_to_string(_array: Array) -> String:
+	var text: String = "ip address:\n"
+	for i in _array:
+		text += str(i)
+		text += "\n"
+	return text
+	
+
 func _on_connection_failed(error):
 	$status_label.text = "Error connecting to server " + error
 
