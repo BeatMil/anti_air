@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://script/server_label.gd" type="Script" id=1]
+
+[node name="sever_2dnode" type="Node2D"]
+
+[node name="user_count_label" type="Label" parent="."]
+margin_left = 39.0
+margin_top = 68.0
+margin_right = 172.0
+margin_bottom = 102.0
+text = "User count: 0"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
