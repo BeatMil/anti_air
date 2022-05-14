@@ -23,7 +23,9 @@ func array_to_string(_array: Array) -> String:
 
 func _peer_connected(id):
 	$user_count_label.text = "Total Users:" + str(get_tree().get_network_connected_peers().size())
+	print("peer connected! ", id)
 
   
 func _peer_disconnected(id):
 	$user_count_label.text = "Total Users:" + str(get_tree().get_network_connected_peers().size())
+	print("peer disconnected!", id)
