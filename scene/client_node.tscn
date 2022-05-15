@@ -6,44 +6,64 @@
 script = ExtResource( 1 )
 
 [node name="connect_button" type="Button" parent="."]
-margin_left = 338.0
-margin_top = 121.0
-margin_right = 488.0
-margin_bottom = 172.0
+margin_left = 60.752
+margin_top = 401.616
+margin_right = 210.752
+margin_bottom = 452.616
 text = "connect"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="disconnect_button" type="Button" parent="."]
-margin_left = 336.0
-margin_top = 233.0
-margin_right = 489.0
-margin_bottom = 283.0
+margin_left = 58.7518
+margin_top = 485.554
+margin_right = 211.752
+margin_bottom = 535.554
 text = "disconnect"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="status_label" type="Label" parent="."]
-margin_left = 539.0
-margin_top = 120.0
-margin_right = 664.0
-margin_bottom = 157.0
+margin_left = 73.1783
+margin_top = 64.9994
+margin_right = 198.178
+margin_bottom = 101.999
 text = "Heyy I'm a label"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ip_label" type="Label" parent="."]
-margin_left = 541.832
-margin_top = 159.643
-margin_right = 666.832
-margin_bottom = 196.643
+margin_left = 76.0103
+margin_top = 104.642
+margin_right = 201.01
+margin_bottom = 141.642
 text = "My ip: ..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="chat_textEdit" type="TextEdit" parent="."]
+margin_left = 542.0
+margin_top = 397.0
+margin_right = 861.0
+margin_bottom = 450.0
+text = "type here"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="chat_display_label" type="Label" parent="."]
+margin_left = 502.0
+margin_top = 5.0
+margin_right = 912.0
+margin_bottom = 386.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [connection signal="pressed" from="connect_button" to="." method="_on_connect_button_pressed"]
 [connection signal="pressed" from="disconnect_button" to="." method="_on_disconnect_button_pressed"]
+[connection signal="focus_entered" from="chat_textEdit" to="." method="_on_chat_textEdit_focus_entered"]

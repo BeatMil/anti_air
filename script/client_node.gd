@@ -38,3 +38,14 @@ func _on_connect_button_pressed():
 func _on_disconnect_button_pressed():
 	get_tree().set_network_peer(null)
 	$status_label.text = "Disconnect!"
+
+
+func _input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_ENTER:
+			chat.send_message($chat_textEdit.text)
+			$chat_textEdit.text = ""
+
+
+func _on_chat_textEdit_focus_entered():
+	$chat_textEdit.text = ""

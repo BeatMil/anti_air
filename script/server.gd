@@ -29,3 +29,22 @@ func _peer_connected(id):
 func _peer_disconnected(id):
 	$user_count_label.text = "Total Users:" + str(get_tree().get_network_connected_peers().size())
 	print("peer disconnected!", id)
+
+
+func _on_TextEdit_breakpoint_toggled(row):
+	print("breakpoint change!", row)
+
+
+func _on_TextEdit_text_changed():
+	print("text changed!")
+
+
+func _input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_ENTER:
+			chat.send_message($chat_textEdit.text)
+			$chat_textEdit.text = ""
+
+
+func _on_chat_textEdit_focus_entered():
+	$chat_textEdit.text = ""

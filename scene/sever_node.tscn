@@ -24,3 +24,26 @@ text = "User count: 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="chat_textEdit" type="TextEdit" parent="."]
+margin_left = 542.0
+margin_top = 397.0
+margin_right = 861.0
+margin_bottom = 450.0
+text = "type here"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="chat_display_label" type="Label" parent="."]
+margin_left = 502.0
+margin_top = 5.0
+margin_right = 912.0
+margin_bottom = 386.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="breakpoint_toggled" from="chat_textEdit" to="." method="_on_TextEdit_breakpoint_toggled"]
+[connection signal="focus_entered" from="chat_textEdit" to="." method="_on_chat_textEdit_focus_entered"]
+[connection signal="text_changed" from="chat_textEdit" to="." method="_on_TextEdit_text_changed"]
