@@ -30,7 +30,6 @@ margin_left = 542.0
 margin_top = 397.0
 margin_right = 861.0
 margin_bottom = 450.0
-text = "type here"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -40,6 +39,26 @@ margin_left = 502.0
 margin_top = 5.0
 margin_right = 912.0
 margin_bottom = 386.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="chat_display_label2" type="Label" parent="."]
+margin_left = 198.0
+margin_top = 66.0
+margin_right = 242.0
+margin_bottom = 86.0
+text = "name:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit_name" type="TextEdit" parent="."]
+margin_left = 246.82
+margin_top = 63.2929
+margin_right = 391.82
+margin_bottom = 87.2929
+text = "noname"
 __meta__ = {
 "_edit_use_anchors_": false
 }

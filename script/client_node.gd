@@ -30,9 +30,9 @@ func _on_packet_received(id,packet):
 
 func _on_connect_button_pressed():
 	var network = NetworkedMultiplayerENet.new()
-	network.create_client(IP_ADDRESS, PORT)
+	network.create_client($TextEdit_ip.text, PORT)
 	get_tree().set_network_peer(network)
-	$status_label.text = "Connect!"
+	$status_label.text = "Connect! " + $TextEdit_ip.text
 
 
 func _on_disconnect_button_pressed():
@@ -43,9 +43,13 @@ func _on_disconnect_button_pressed():
 func _input(event):
 	if event is InputEventKey:
 		if event.pressed and event.scancode == KEY_ENTER:
-			chat.send_message($chat_textEdit.text)
+			chat.send_message($chat_textEdit.text, $TextEdit_name.text)
 			$chat_textEdit.text = ""
 
 
 func _on_chat_textEdit_focus_entered():
 	$chat_textEdit.text = ""
+
+
+func _on_Button_pressed():
+	chat.say_bob()

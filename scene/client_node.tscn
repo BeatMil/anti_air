@@ -26,11 +26,21 @@ __meta__ = {
 }
 
 [node name="status_label" type="Label" parent="."]
-margin_left = 73.1783
-margin_top = 64.9994
-margin_right = 198.178
-margin_bottom = 101.999
+margin_left = 252.772
+margin_top = 401.738
+margin_right = 377.772
+margin_bottom = 438.738
 text = "Heyy I'm a label"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="status_label2" type="Label" parent="."]
+margin_left = 211.0
+margin_top = 64.0
+margin_right = 261.0
+margin_bottom = 86.0
+text = "name:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -55,6 +65,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextEdit_name" type="TextEdit" parent="."]
+margin_left = 258.122
+margin_top = 61.1225
+margin_right = 388.122
+margin_bottom = 83.1225
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ip_Label" type="Label" parent="."]
+margin_left = 213.67
+margin_top = 34.6335
+margin_right = 263.67
+margin_bottom = 56.6335
+text = "ip:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit_ip" type="TextEdit" parent="."]
+margin_left = 256.838
+margin_top = 30.6335
+margin_right = 386.838
+margin_bottom = 52.6335
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="chat_display_label" type="Label" parent="."]
 margin_left = 502.0
 margin_top = 5.0
@@ -64,6 +102,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button" type="Button" parent="chat_display_label"]
+margin_left = -217.792
+margin_top = 178.27
+margin_right = -65.7922
+margin_bottom = 222.27
+text = "say bob"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="connect_button" to="." method="_on_connect_button_pressed"]
 [connection signal="pressed" from="disconnect_button" to="." method="_on_disconnect_button_pressed"]
 [connection signal="focus_entered" from="chat_textEdit" to="." method="_on_chat_textEdit_focus_entered"]
+[connection signal="focus_entered" from="TextEdit_name" to="." method="_on_chat_textEdit_focus_entered"]
+[connection signal="focus_entered" from="TextEdit_ip" to="." method="_on_chat_textEdit_focus_entered"]
+[connection signal="pressed" from="chat_display_label/Button" to="." method="_on_Button_pressed"]

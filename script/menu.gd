@@ -10,7 +10,6 @@ extends Node2D
 func _ready():
 	print(OS.get_name())
 	print(IP.get_local_addresses()[3])
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

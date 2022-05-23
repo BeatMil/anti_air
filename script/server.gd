@@ -36,13 +36,13 @@ func _on_TextEdit_breakpoint_toggled(row):
 
 
 func _on_TextEdit_text_changed():
-	print("text changed!")
+	pass
 
 
 func _input(event):
 	if event is InputEventKey:
 		if event.pressed and event.scancode == KEY_ENTER:
-			chat.send_message($chat_textEdit.text)
+			chat.send_message($chat_textEdit.text, $TextEdit_name.text)
 			$chat_textEdit.text = ""
 
 
